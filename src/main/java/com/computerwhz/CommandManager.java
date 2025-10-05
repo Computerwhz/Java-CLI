@@ -8,7 +8,7 @@ public class CommandManager {
 
     private final Map<String, Command> commandMap = new HashMap<>();
 
-    public CommandManager(){
+    public void Run(){
         Scanner scanner = new Scanner(System.in);
 
         while (true){
@@ -46,7 +46,4 @@ public class CommandManager {
             System.err.println("Could not un-register command " + command + " command is not registered");
         }
     }
-
-
-
 }

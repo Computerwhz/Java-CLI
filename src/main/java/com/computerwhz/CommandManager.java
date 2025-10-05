@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class CommandManager {
 
-    private Map<String, Command> commandMap = new HashMap<>();
+    private final Map<String, Command> commandMap = new HashMap<>();
 
     public CommandManager(){
         Scanner scanner = new Scanner(System.in);
@@ -30,7 +30,21 @@ public class CommandManager {
     }
 
     public void Register(String command, Command commandClass){
-        commandMap.put(command, commandClass);
+        if (!commandMap.containsKey(command)){
+            commandMap.put(command, commandClass);
+        }
+        else{
+            System.err.println("Could not register command " + command + " is already registered");
+        }
+    }
+
+    public void UnRegister(String command){
+        if (commandMap.containsKey(command)){
+            commandMap.remove(command);
+        }
+        else{
+            System.err.println("Could not un-register command " + command + " command is not registered");
+        }
     }
 
 

@@ -21,7 +21,6 @@ public class CommandManager {
             Scanner scanner = new Scanner(System.in);
 
             while (running) {
-                System.out.print("> ");
                 String input = scanner.nextLine().trim();
 
                 if (input.isEmpty()) continue;
@@ -29,12 +28,6 @@ public class CommandManager {
                 String[] parts = input.split("\\s+");
                 String command = parts[0];
                 String[] arguments = java.util.Arrays.copyOfRange(parts, 1, parts.length);
-
-                if (command.equalsIgnoreCase("exit")) {
-                    System.out.println("Exiting command manager...");
-                    running = false;
-                    break;
-                }
 
                 if (commandMap.containsKey(command)) {
                     commandMap.get(command).execute(arguments);
@@ -46,7 +39,7 @@ public class CommandManager {
             scanner.close();
         });
 
-        inputThread.setDaemon(false);  // Ensure it keeps running until the loop ends
+        inputThread.setDaemon(false);
         inputThread.start();
     }
 
@@ -65,5 +58,9 @@ public class CommandManager {
         } else {
             System.err.println("Could not un-register command '" + command + "': not registered");
         }
+    }
+
+    public void Stop(){
+        running = false;
     }
 }

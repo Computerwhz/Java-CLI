@@ -7,7 +7,7 @@ import java.util.concurrent.ConcurrentHashMap;
 public class CommandManager {
 
     private final Map<String, Command> commandMap = new ConcurrentHashMap<>();
-    private Boolean running;
+    private boolean running;
 
     public void Run() {
         if (running) {

@@ -37,13 +37,4 @@ public class CommandManager {
             System.err.println("Could not register command " + command + " is already registered");
         }
     }
-
-    public void UnRegister(String command){
-        if (commandMap.containsKey(command)){
-            commandMap.remove(command);
-        }
-        else{
-            System.err.println("Could not un-register command " + command + " command is not registered");
-        }
-    }
 }

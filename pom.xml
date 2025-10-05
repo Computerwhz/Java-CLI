@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.computerwhz</groupId>
-    <artifactId>Java-CLI</artifactId>
+    <artifactId>Java-CLI-Tool</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>

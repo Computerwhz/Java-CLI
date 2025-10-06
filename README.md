@@ -4,6 +4,8 @@ Simple CLI tool for java
 
 ### Install dependency
 
+[![](https://jitpack.io/v/Computerwhz/Java-CLI.svg)](https://jitpack.io/#Computerwhz/Java-CLI)
+
 ```
 <repository>
     <id>jitpack.io</id>

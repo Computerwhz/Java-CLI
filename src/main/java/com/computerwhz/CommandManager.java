@@ -60,6 +60,10 @@ public class CommandManager {
         }
     }
 
+    public void UnRegisterAll(){
+        commandMap.clear();
+    }
+
     public void Stop(){
         running = false;
     }

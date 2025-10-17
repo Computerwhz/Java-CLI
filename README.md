@@ -62,3 +62,6 @@ commandManager.Register("mycommand", new MyCommand());
 commandManager.Run();
 ```
 
+### AI disclosure
+AI was NOT used to create this project
+
